@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "type_off_eggs",
+  "info": {
+    "singularName": "type-off-egg",
+    "pluralName": "type-off-eggs",
+    "displayName": "TypeOffEgg"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "instruction": {
+      "type": "richtext",
+      "required": true
+    },
+    "sizes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::size.size",
+      "mappedBy": "type_off_egg"
+    }
+  }
+}
